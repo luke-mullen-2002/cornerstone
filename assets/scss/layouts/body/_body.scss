@@ -23,7 +23,9 @@
         $behavior: nest
     );
 }
-
+.cart-item-image{
+    width: 100%;
+}
 .page-content,
 .page-content--full {
     @include grid-column(12);
