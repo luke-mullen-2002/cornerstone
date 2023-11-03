@@ -1,4 +1,47 @@
-{
+{    
+"optimized_checkout": {
+        "address": {
+            "address_line_1_label": "Address Line 1",
+            "address_line_1_required_error": "Address Line 1 is required",
+            "address_line_2_label": "Address Line 2",
+            "address_line_2_required_error": "Address Line 2 is required",
+            "address_not_recognized_heading": "We did not recognize your address",
+            "consignment_address_updated_text": "The item was successfully assigned the new address.",
+            "city_label": "City",
+            "city_required_error": "City is required",
+            "company_name_label": "Company Name",
+            "company_name_required_error": "Company is required",
+            "confirm_address_action": "Proceed with current address",
+            "confirm_address_text": "We could not find a match for the address you entered. Please confirm the address.",
+            "country_label": "Country",
+            "country_required_error": "Country is required",
+            "custom_required_error": "{label} is required",
+            "custom_min_error": "{label} should be bigger than {min}",
+            "custom_max_error": "{label} should be smaller than {max}",
+            "invalid_characters_error": "{label} contains invalid characters",
+            "custom_valid_error": "{label} is not valid",
+            "edit_address_action": "Edit address",
+            "enter_address_action": "Enter a new address",
+            "enter_or_select_address_action": "Enter or select a different address",
+            "add_address_heading": "Add Address",
+            "save_address_action": "Save Address",
+            "first_name_label": "First Name",
+            "first_name_required_error": "First Name is required",
+            "last_name_label": "Last Name",
+            "last_name_required_error": "Last Name is required",
+            "phone_number_label": "Phone Number",
+            "phone_number_required_error": "Phone Number is required",
+            "postal_code_label": "Postcode",
+            "postal_code_required_error": "Postcode is required",
+            "save_in_addressbook": "Save this address in my address book.",
+            "select_country_action": "Select a country",
+            "select_state_action": " ",
+            "state_label": "County",
+            "state_required_error": "County is required",
+            "select": "Select",
+            "select_all": "All",
+            "select_none": "None"
+        }},
     "header": {
         "welcome_back": "Welcome back, {name}",
         "skip_to_main": "Skip to main content"
@@ -39,14 +82,13 @@
     "cart": {
         "nav_aria_label": "Cart with 0 items",
         "continue_shopping": "Click here to continue shopping",
-        "login_to_checkout": "Login to proceed to checkout",
         "items": "{NUM, plural, =0{(0 items)} one {(# item)} other {(# items)}}",
         "checkout": {
             "address": {
-                "multiple": "check out with multiple addresses",
+                "multiple": "checkout with multiple addresses",
                 "or": "or"
             },
-            "button": "Check out",
+            "button": "Checkout",
             "empty_cart": "Your cart is empty",
             "title": "Click here to proceed to checkout",
             "item": "Item",
@@ -62,8 +104,8 @@
             "update": "Update shipping cost"
         },
         "preview": {
-            "checkout_now": "Check out now",
-            "checkout_multiple": "or check out with multiple addresses",
+            "checkout_now": "Checkout now",
+            "checkout_multiple": "or checkout with multiple addresses",
             "view_cart": "View Cart"
         },
         "label": "Your Cart ({quantity, plural, one {# item} other {# items}})",
@@ -100,10 +142,10 @@
             "add_info": "Add Info",
             "cancel": "Cancel",
             "select_a_country": "Country",
-            "select_a_state": "State/province",
+            "select_a_state": "County",
             "estimate_shipping": "Estimate Shipping",
             "suburb_city": "Suburb/city",
-            "zip_postal_code": "Zip/postcode",
+            "zip_postal_code": "Postcode",
             "free_shipping": "Free shipping",
             "hide_ups_rates": "Hide UPS Rates",
             "show_ups_rates": "Show UPS Rates",
@@ -154,7 +196,6 @@
         "yes": "Yes",
         "from": "From",
         "to": "to",
-        "ok": "OK",
         "cancel": "Cancel",
         "close": "Close",
         "or": "or",
@@ -260,7 +301,7 @@
         "heading": "New Account",
         "created": {
             "heading": "Your account has been created",
-            "intro": "Thank you for creating your account at {store_name}. Your account details have been emailed to {email}",
+            "intro": "Thank you for creating your account at {store_name}. Your account details have been emailed to <strong>{email}</strong>",
             "continue": "Continue Shopping"
         },
         "recaptcha_title": "Google recaptcha"
@@ -274,7 +315,7 @@
         "new_customer": {
             "heading": "New Customer?",
             "intro": "Create an account with us and you'll be able to:",
-            "fact1": "Check out faster",
+            "fact1": "Checkout faster",
             "fact2": "Save multiple shipping addresses",
             "fact3": "Access your order history",
             "fact4": "Track new orders",
@@ -347,7 +388,6 @@
                 "ship_to": "Ship To",
                 "ship_to_multi": "Items shipped to {street}, {city}, {state}, {zip}, {country}",
                 "ship_to_multi_text": "Order will be shipped to multiple addresses",
-                "pickup_details": "Pickup Details",
                 "bill_to": "Bill To",
                 "how_to_pay": "Here's how to pay for your order:",
                 "order_details": "Order Details",
@@ -367,13 +407,7 @@
                 "actions": "Actions",
                 "reorder": "Reorder",
                 "return": "Return",
-                "pickup": "Pickup Details",
-                "pickup_method": "Pickup method",
-                "in_store_pickup": "In-store pickup",
-                "print_invoice": "Print Invoice",
-                "phone": "Phone",
-                "email": "Email",
-                "opening_hours": "Opening hours"
+                "print_invoice": "Print Invoice"
             },
             "downloads": {
                 "heading": "Order #{number} Downloads",
@@ -388,7 +422,6 @@
         "payment_methods": {
             "heading": "Payment Methods",
             "payment_method": "Payment method",
-            "bank_account": "Bank account",
             "billing_address": "Billing address",
             "card_ending_in": "ending in {last_four}",
             "card_expiry": "{month}/{year}",
@@ -402,22 +435,20 @@
                 "american_express": "American Express",
                 "credit_card": "Credit Card",
                 "dankort": "Dankort",
-                "diners_club": "Diners Club",
+                "diners": "Diners Club",
                 "discover": "Discover",
                 "jcb": "JCB",
                 "maestro": "Maestro",
                 "mastercard": "Mastercard",
-                "unionpay": "Union Pay",
                 "visa": "Visa"
             },
-            "ach": "ACH",
             "paypal": "PayPal",
             "billing_address_labels": {
               "address_line_1": "Address Line 1",
               "address_line_2": "Address Line 2",
               "suburb_city": "Suburb/City",
-              "state_province": "State/Province",
-              "choose_state": "Choose a State",
+              "state_province": "County",
+              "choose_state": "Choose a County",
               "country": "Country",
               "choose_country": "Choose a Country",
               "zip_postcode": "Zip/Postcode"
@@ -438,7 +469,6 @@
             "reason": "Return Reason",
             "action": "Return Action",
             "comments": "Your Comments",
-            "submit_request": "Submit Return Request",
             "list": {
                 "return_number": "Return #{id}",
                 "product_details": "Returning {num_products}"
@@ -544,8 +574,7 @@
             "rma": "RMA Number",
             "question": "Comments/Questions",
             "submit": "Submit Form",
-            "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>.",
-            "manual_captcha_instruction": "Please answer the question below for additional verification."
+            "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>."
         },
         "create_account": {
             "submit_value": "Create Account"
@@ -585,8 +614,8 @@
             "address2": "Address Line 2",
             "city": "Suburb/City",
             "country": "Country",
-            "state": "State/Province",
-            "postal_code": "Zip/Postcode",
+            "state": "County",
+            "postal_code": "Postcode",
             "choose_country": "Choose a Country",
             "default_instrument": "Default Payment Method"
         },
@@ -770,7 +799,6 @@
         "shipping_free": "Free Shipping",
         "shipping_calculated": "Calculated at Checkout",
         "sold_out": "Sold Out",
-        "out_of_stock_default_message": "Sold Out",
         "pre_order": "Pre-Order Now",
         "choose_options": "Choose Options",
         "quick_view": "Quick view",
@@ -823,10 +851,6 @@
         "qty": "Qty",
         "code": "Code/SKU",
         "shipping_address": "Shipping Address",
-        "fulfillment": "Fulfillment",
-        "digital": "Digital",
-        "shipping": "Shipping",
-        "pickup": "Pickup",
         "product_name": "Product Name",
         "price": "Price",
         "total": "Total",
@@ -918,6 +942,13 @@
     },
     "maintenance": {
         "down": "Down for Maintenance"
+    },
+    "admin": {
+        "maintenance_header": "Your store is down for maintenance.",
+        "maintenance_tooltip": "Only administrators can view the store at the moment. Visit your control panel settings page to disable maintenance mode.",
+        "maintenance_showstore_link": "Click here to see what your visitors will see.",
+        "prelaunch_header": "Your storefront is private. Share your site with preview code:",
+        "page_builder_link": "Design this page in Page Builder"
     },
     "carousel": {
         "arrow_and_dot_aria_label": "Go to slide [SLIDE_NUMBER] of [SLIDES_QUANTITY]",

@@ -1,10 +1,111 @@
 <ul class="cart-totals">
+     {{#each cart.items}}
+            
+            {{#inArray (split "133,134,135,136,137,138,139,140,141,142,143,144,145,146" ",") (JSONstringify product_id) }}
+                
+                <style>
+                    .show-hide{display:flex;}
+                </style>
+                
+            {{/inArray}}
+            
+            {{#inArray (split "125,127,189,128,129,131,132,191" ",") (JSONstringify product_id) }}
+                
+                <style>
+                    .warranty-hide{display:flex;}
+                </style>
+                
+            {{/inArray}}
+             {{#if product_id '==' 147}}
+                
+                <style>
+                    .installtion{display:none;}
+                </style>
+                
+            {{/if}}
+            {{#if product_id '==' 148}}
+                
+                <style>
+                    .disposal{display:none;}
+                </style>
+                
+            {{/if}}
+            {{#if product_id '==' 179}}
+                
+                <style>
+                    .disconnection{display:none;}
+                </style>
+                
+            {{/if}}
+            {{#if product_id '==' 198}}
+                
+                <style>
+                    .warranty-hide{display:none;}
+                </style>
+                
+            {{/if}}
+        {{/each}}
+        
+           <h3 class="help-heading show-hide">Help with connection and removal</h3>
+                <li class="d-flex show-hide installtion">
+                    <div class="product-icon">
+                        <img src="https://cdn11.bigcommerce.com/s-vbvjr2ffm9/images/stencil/original/image-manager/wrench.png">
+                    </div>
+                    <div class="description">
+                        <h6>Connection £25 </h6>
+                        <p>Our professional team will unpack, connect and test your new washing machine on delivery.</p>
+                    </div>
+                    <div class="button cart-button">
+                        <a href="https://checkout.ebac.com/cart.php?action=add&product_id=147">Add to basket</a>
+                    </div>
+                    
+                </li>
+                
+                <li class="d-flex show-hide disposal">
+                    <div class="product-icon">
+                        <img src="https://cdn11.bigcommerce.com/s-vbvjr2ffm9/images/stencil/original/image-manager/dustbin.png">
+                    </div>
+                    <div class="description">
+                        <h6>Remove \ Disposal £35.00</h6>
+                        <p>Our professional delivery team will remove your disconnected washing machine and take it away for recycling. Please ensure your machine is disconnected or our team will be unable to remove it.</p>
+                    </div>
+                    <div class="button cart-button">
+                        <a href="https://checkout.ebac.com/cart.php?action=add&product_id=148">Add to basket</a>
+                    </div>
+                </li>
+               
+                <li class="d-flex show-hide disconnection">
+                    <div class="product-icon">
+                        <img src="https://cdn11.bigcommerce.com/s-vbvjr2ffm9/images/stencil/original/image-manager/wrench.png">
+                    </div>
+                    <div class="description">
+                        <h6>Disconnection £25</h6>
+                        <p>Our team will disconnect your old washing machine from the plumbing system.</p>
+                    </div>
+                    <div class="button cart-button">
+                        <a href="https://checkout.ebac.com/cart.php?action=add&product_id=179">Add to basket</a>
+                    </div>
+                </li>
+            <h3 class="help-heading warranty-hide">Warranty Upgrade</h3>
+            <li class="d-flex warranty-hide warranty-upgrade">
+                <div class="product-icon">
+                    <img src="https://cdn11.bigcommerce.com/s-vbvjr2ffm9/images/stencil/original/image-manager/wrench.png">
+                </div>
+                <div class="description">
+                    <h6>Dehumidifer Warranty Upgrade £45 </h6>
+                    <p>Upgrade your dehumidifier to a 5 year warranty.</p>
+                </div>
+                <div class="button cart-button">
+                    <a href="https://checkout.ebac.com/cart.php?action=add&product_id=198">Add to basket</a>
+                </div>
+                
+            </li>
     <li class="cart-total">
         <div class="cart-total-label">
             <strong>{{lang 'cart.checkout.subtotal'}}:</strong>
         </div>
         <div class="cart-total-value">
-            {{#or customer (unless settings.hide_price_from_guests)}}
+            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                 <span>{{cart.sub_total.formatted}}</span>
             {{else}}
                 {{> components/common/login-for-pricing}}
@@ -20,18 +121,6 @@
                 <span>{{cart.gift_wrapping_cost.formatted}}</span>
             </div>
         </li>
-    {{/if}}
-    {{#if cart.fees}}
-        {{#each cart.fees}}
-            <li class="cart-total">
-                <div class="cart-total-label">
-                    <strong>{{display_name}}:</strong>
-                </div>
-                <div class="cart-total-value">
-                    <span>{{cost.formatted}}</span>
-                </div>
-            </li>
-        {{/each}}
     {{/if}}
     {{#if cart.shipping_handling.show_estimator}}
         <li class="cart-total">
@@ -111,7 +200,7 @@
             <strong>{{lang 'cart.checkout.grand_total'}}:</strong>
         </div>
         <div class="cart-total-value cart-total-grandTotal">
-            {{#or customer (unless settings.hide_price_from_guests)}}
+            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                 <span>{{cart.grand_total.formatted}}</span>
             {{else}}
                 {{> components/common/login-for-pricing}}
